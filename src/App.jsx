@@ -1,6 +1,8 @@
 import React from 'react'
 import SindiraDemo from './Components/DemoPage/SindiraDemo'
 import "./App.css";
+import { Route,BrowserRouter,Routes } from 'react-router-dom';
+import RangDressesDemo from './Components/DemoPage/RangDressesDemo';
 function App() {
   return (
     <div style={{ 
@@ -11,9 +13,18 @@ function App() {
       justifyContent: 'center', 
       alignItems: 'flex-start' 
     }}>
-      <SindiraDemo/>
+      <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<SindiraDemo/>}/>
+        <Route path="/rang-dresses-demo" element={<RangDressesDemo/>} />
+      </Routes>
+      </BrowserRouter>
     </div>
   )
 }
 
 export default App
+
+
+
+//Rang Dresses Salwar Co ord sets
